@@ -79,6 +79,24 @@ curl -X 'POST' \
 ## Limitations
 
 - The application is limited to 10,000 text characters to analyze.
+- API calls are limited to 5 per minute. If the limit is exceeded, the application will return a `429` status code. (I don not have a paid account, so I am using the free tier 🙊)
+
+## Pytest
+
+To run the tests, 
+
+```text
+tests
+├── __init__.py
+├── emotion_test.py
+└── ratelimit_test.py
+```
+
+execute the following command:
+
+```bash
+pytest --import-mode=append
+```
 
 ## Examples
 
