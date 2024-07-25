@@ -10,7 +10,7 @@ from analyzer import emotion_analyzer
 
 class TestSentimentAnalyzer(unittest.TestCase):
     @patch('analyzer.emotions.get_nlu_client')
-    @patch('analyzer.emotions.emotion_response')
+    @patch('analyzer.emotions.api_response')
 
     def test_sentiment_analyzer(self, mock_emotion_response, mock_get_nlu_client):
 
@@ -95,7 +95,7 @@ class TestSentimentAnalyzer(unittest.TestCase):
         self.assertEqual(result_3['emotion']['document']['emotion']['dominant_emotion'], 'disgust')
 
         result_4 = emotion_analyzer('I am so sad about this', 'en')
-        self.assertEqual(result_4['emotion']['document']['emotion']['dominant_emotion'], 'fear')
+        self.assertEqual(result_4['emotion']['document']['emotion']['dominant_emotion'], 'sadness')
 
         result_5 = emotion_analyzer('I am really afraid that this will happen', 'en')
         self.assertEqual(result_5['emotion']['document']['emotion']['dominant_emotion'], 'fear')
