@@ -43,3 +43,6 @@ bower_components/
 
 # environment file
 .env-*
+
+# files
+my_slowapi.py
