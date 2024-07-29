@@ -80,10 +80,10 @@ def emotion_analyzer(text: str, languaje: str) -> Dict[str, any]:
 
     try:
         emotions = api_response(nlu_client, text, languaje)
-        dominant_emotion = get_dominant_emotion(emotions)
-        emotions = add_dominant_emotion(emotions, dominant_emotion)
+        # dominant_emotion = get_dominant_emotion(emotions)
+        # emotions = add_dominant_emotion(emotions, dominant_emotion)
 
-        logger.info(f"Successfully analyzed text with dominant emotion: {dominant_emotion}")
+        logger.info(f"Successfully analyzed text : {200} OK")
 
         return emotions
     
