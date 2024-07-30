@@ -1,0 +1,33 @@
+# Ignore development files and directories
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+*.md
+
+# Ignore local development environment files
+env
+venv
+.venv
+.env.*
+.env
+.env.*
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.swp
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore configuration files
+*.json
+*.sh

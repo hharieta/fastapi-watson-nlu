@@ -47,6 +47,9 @@ async def analyze_text(request: Request, text_request: TextRequest) -> dict:
     except ValidationError as e:
         raise HTTPException(status_code=422, detail=e.errors())
 
-if __name__ == "__main__":
+def main():
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+if __name__ == "__main__":
+    main()
