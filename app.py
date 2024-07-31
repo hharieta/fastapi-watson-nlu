@@ -8,9 +8,7 @@ from analyzer import emotion_analyzer
 
 limiter = Limiter(key_func=get_remote_address)
 origins = [
-    "http://localhost:3000",
-    "https://emotion-analyzer-ui.hharieta.lat",
-    "https://emotion-rfealuv5n-gatovskys-projects.vercel.app",
+    "*",
 ]
 
 app = FastAPI(
